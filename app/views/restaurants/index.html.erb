@@ -1,0 +1,12 @@
+<h1>Restaurants#index</h1>
+<ul>
+  <p><%= "*" * 100 %></p>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <li><%= restaurant.category %></li>
+  <li><%= restaurant.address %></li>
+  <p><%= "*" * 100 %></p>
+  <% end %>
+</ul>
+
+<h3><%= link_to "Add a restaurant", new_restaurant_path %></h3>
